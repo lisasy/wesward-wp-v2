@@ -1,5 +1,3 @@
-  <div id="footer">
-  	<div class="container">
   <div id="footer" class="container">
 	  	<div class="row">
 	  		<?php dynamic_sidebar('footer-sidebar'); ?>
@@ -8,7 +6,6 @@
 			<h1>Empowering histories and voices.</h1>
 		</div>
 	</div>
-  </div>
   <?php wp_footer(); ?> 
   </body>
 </html>

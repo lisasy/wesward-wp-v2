@@ -10,21 +10,18 @@ Template Name: Front Page
     <div class="container">
         <div class="row">
             <section id="content" class="elevencol">
-    			<!-- Responsive Slider Testing -->
 			    <div class="callbacks_container row">
 			      <ul class="rslides" id="slider3">
+					<?php query_posts('order=DESC'); ?>
+					<?php while (have_posts()) : the_post(); ?>
+					<?php if ( has_post_thumbnail()) { ?>
 			        <li>
-			          <img src="<?php bloginfo('template_directory'); ?>/testimages/1.jpg" alt="" />
-			          <p class="caption">The third caption. Here is more text just to see what it looks likes. <small>Here it is in even smaller text.</small></p>
+			          <?php the_post_thumbnail( array(100,100) );  ?>
+			          <p class="caption"><?php the_title(); ?> by <?php the_author_posts_link() ?>, <?php the_time("M. j, Y"); ?></p>
 			        </li>
-			        <li>
-			          <img src="<?php bloginfo('template_directory'); ?>/testimages/2.jpg" alt="" />
-			          <p class="caption">This is another caption</p>
-			        </li>
-			        <li>
-			          <img src="<?php bloginfo('template_directory'); ?>/testimages/3.jpg" alt="" />
-			          <p class="caption">The third caption. Here is more text just to see what it looks likes. <small>Here it is in even smaller text.</small></p>
-			        </li>
+			        <?php	} ?>
+					<?php endwhile; ?>
+				    <?php rewind_posts(); ?>
 			      </ul>
 			    </div>
 			</section>

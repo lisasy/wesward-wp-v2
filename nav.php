@@ -34,7 +34,7 @@
                             <a href="<?php echo get_option('home'); ?>/calendar">Calendar</a>
                         </li>
                         <li id="post-content-link">
-                           
+                           <a href="<?php echo get_option('home'); ?>/post-something/">Post Something!</a>
                         </li>
                     </ul>
                 </div>

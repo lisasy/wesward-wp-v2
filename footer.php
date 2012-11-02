@@ -1,5 +1,6 @@
   <div id="footer">
   	<div class="container">
+  <div id="footer" class="container">
 	  	<div class="row">
 	  		<?php dynamic_sidebar('footer-sidebar'); ?>
 		</div>

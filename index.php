@@ -15,6 +15,7 @@ Template Name: Voices
             <section class="elevencol">
 				<div id="post-container">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<div class="test-body">
 					<div class="row">
 				        <article class="sixteencol post-body">
 				            <aside class="fourcol">
@@ -36,6 +37,7 @@ Template Name: Voices
 				            </div>
 				        </article>
 				    </div>
+					</div><!-- test body -->
 				    <hr>
 				    <?php endwhile; else: endif; ?>
 				</div>

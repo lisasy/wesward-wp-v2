@@ -7,6 +7,7 @@
     <meta name="author" content="Wesward" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 
     <!-- CSS --> 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css" />

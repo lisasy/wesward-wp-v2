@@ -16,7 +16,7 @@ Template Name: Post Something!
               </div>
                 <div class="post-body">
                     <div class="row">
-                        <?php if(function_exists('public_submission_form')) public_submission_form(true); ?>
+<?php if(function_exists('public_submission_form')) public_submission_form(true); ?>
                     </div>
                 </div>
             <?php endwhile; else: endif; ?>

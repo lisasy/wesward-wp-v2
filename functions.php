@@ -63,8 +63,14 @@ function my_register_sidebars() {
 }
 
 /* Enable Thumbnails */
-add_theme_support( 'post-thumbnails' ); 
+if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 200, 130, true);
+add_theme_support( 'add_image_size' );
+if ( function_exists( 'add_image_size' ) ) {
+add_image_size( 'homepage-thumb', 220, 180, true ); //(cropped)
+}
+
+
 
 /* Enable 'Read More' */
 function new_excerpt_more($more) {
@@ -89,6 +95,21 @@ function disqus_embed($disqus_shortname) {
         var disqus_url = "'.get_permalink($post->ID).'";
         var disqus_identifier = "'.$disqus_shortname.'-'.$post->ID.'";
     </script>';
+}
+
+/* fetch first image from post */
+function catch_that_image() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches [1] [0];
+
+  if(empty($first_img)){ //Defines a default image
+    $first_img = "/images/default.jpg";
+  }
+  return $first_img;
 }
 
 ?>

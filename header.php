@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Wesward</title>
     <meta name="author" content="Wesward" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
+    <meta name="keywords" content="<?php bloginfo('keywords'); ?>" />
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 
     <!-- CSS --> 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/1140.css" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/ie.css" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/mobile.css" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/responsiveslides.css" />
-
-    <!-- LESS -->
-    <link rel="stylesheet/less" href="<?php bloginfo('template_directory'); ?>/less/style.less" type="text/css" />
-    <script src="<?php bloginfo('template_directory'); ?>/js/less-1.3.0.min.js"></script>
 
     <!-- TypeKit -->
     <script type="text/javascript" src="//use.typekit.net/dmg5qgn.js"></script>
@@ -55,12 +52,6 @@
     }); // end document ready
     </script>
     <!-- Top Notifcation -->
-<!-- AddThis Welcome BEGIN -->
-<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5035132306b6fcd3"></script>
-<script type='text/javascript'>
-addthis.bar.initialize({'default':{"backgroundColor":"#000000","buttonColor":"#16b3da","textColor":"#FFFFFF","buttonTextColor":"#FFFFFF"},rules:[{"name":"Facebook","match":{"referringService":"facebook"},"message":"Tell your friends about us:","action":{"type":"button","text":"Share on Facebook","verb":"share","service":"facebook"}}]});
-</script>
-<!-- AddThis Welcome END -->
 <!-- Google Analytics -->
 <script type="text/javascript">
 

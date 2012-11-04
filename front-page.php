@@ -12,12 +12,21 @@ Template Name: Front Page
             <section id="content" class="elevencol">
 			    <div class="callbacks_container row">
 			      <ul class="rslides" id="slider3">
-					<?php query_posts('order=DESC'); ?>
+					<?php query_posts('posts_per_page=10'); ?>
 					<?php while (have_posts()) : the_post(); ?>
 					<?php if ( has_post_thumbnail()) { ?>
 			        <li>
-			          <?php the_post_thumbnail( array(100,100) );  ?>
-			          <p class="caption"><?php the_title(); ?> by <?php the_author_posts_link() ?>, <?php the_time("M. j, Y"); ?></p>
+			          <img src="<?php echo catch_that_image(); ?>">
+			          <p class="caption"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> by <?php the_author_posts_link() ?>, <?php the_time("M. j, Y"); ?> : 
+			          	<small>	
+			          		<?php
+							  $myExcerpt = get_the_excerpt();
+							  $tags = array("<p>", "</p>");
+							  $myExcerpt = str_replace($tags, "", $myExcerpt);
+							  echo $myExcerpt;
+						  ?>
+						</small>
+			          </p>
 			        </li>
 			        <?php	} ?>
 					<?php endwhile; ?>

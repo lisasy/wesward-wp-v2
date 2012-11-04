@@ -1,6 +1,7 @@
 <aside class="fivecol last">
 	<article>
 		<ul class="feature">
+			<h3>Featured Voices</h3>
 			<?php 
         	query_posts( 'category_name=opinion' );
        		 while ( have_posts() ) : the_post(); ?>

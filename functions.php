@@ -63,13 +63,8 @@ function my_register_sidebars() {
 }
 
 /* Enable Thumbnails */
-if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 200, 130, true);
-add_theme_support( 'add_image_size' );
-if ( function_exists( 'add_image_size' ) ) {
-add_image_size( 'homepage-thumb', 220, 180, true ); //(cropped)
-}
-
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 100, 100, true);
 
 
 /* Enable 'Read More' */
